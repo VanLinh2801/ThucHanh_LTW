@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hệ Thống Kiểm Tra Trắc Nghiệm</title>
+    <title>Hệ Thống Khảo Sát Thông Tin</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Hệ Thống Kiểm Tra Trắc Nghiệm</h1>
+        <h1>Hệ Thống Khảo Sát Thông Tin</h1>
         
         <!-- User Information Form -->
         <div id="user-info-section" class="section">
-            <h2>Thông Tin Thí Sinh</h2>
+            <h2>Thông Tin Người Thực Hiện Bài Khảo Sát</h2>
             <form id="user-info-form">
                 <div class="form-group">
                     <label for="fullName">Họ và Tên:</label>
@@ -23,14 +23,14 @@
                     <input type="date" id="dob" name="dob" required>
                 </div>
                 <div class="form-group">
-                    <label for="studentId">Mã Số Sinh Viên:</label>
+                    <label for="studentId">Số Căn Cước Công Dân:</label>
                     <input type="text" id="studentId" name="studentId" required>
                 </div>
                 <div class="form-group">
-                    <label for="class">Lớp:</label>
+                    <label for="class">Địa Chỉ Thường Trú:</label>
                     <input type="text" id="class" name="class" required>
                 </div>
-                <button type="submit" class="btn">Bắt Đầu Bài Kiểm Tra</button>
+                <button type="submit" class="btn">Bắt Đầu Bài Khảo Sát</button>
             </form>
         </div>
 
@@ -64,19 +64,19 @@
                 </div>
             </div>
 
-            <button id="submit-test" class="btn submit-btn">Nộp Bài</button>
+            <button id="submit-test" class="btn submit-btn">Kết Thúc Bài Khảo Sát</button>
         </div>
 
         <!-- Results Section (Initially Hidden) -->
         <div id="results-section" class="section hidden">
-            <h2>Kết Quả Bài Kiểm Tra</h2>
+            <h2>Kết Quả Bài Khảo Sát</h2>
             <div id="results-content">
                 <div id="candidate-results-info" class="candidate-info">
                     <!-- Candidate information will be inserted here -->
                 </div>
                 <div id="score-summary"></div>
                 <div id="detailed-results"></div>
-                <button id="restart-btn" class="btn">Làm Bài Kiểm Tra Mới</button>
+                <button id="restart-btn" class="btn">Làm Bài Khảo Sát Mới</button>
             </div>
         </div>
     </div>
@@ -84,4 +84,3 @@
     <script src="index.js"></script>
 </body>
 </html>
-
