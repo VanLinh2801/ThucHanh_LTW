@@ -371,10 +371,10 @@ document.addEventListener("DOMContentLoaded", () => {
   function displayCandidateResultsInfo() {
     const formattedDate = new Date(userInfo.dob).toLocaleDateString()
     candidateResultsInfo.innerHTML = `
-            <h3>Thông Tin Thí Sinh</h3>
+            <h3>Thông Tin Người Thực Hiện Khảo Sát</h3>
             <p><strong>Họ và Tên:</strong> ${userInfo.fullName}</p>
-            <p><strong>Mã Số Sinh Viên:</strong> ${userInfo.studentId}</p>
-            <p><strong>Lớp:</strong> ${userInfo.class}</p>
+            <p><strong>Số Căn Cước Công Dân:</strong> ${userInfo.studentId}</p>
+            <p><strong>Địa Chỉ Thường Trú:</strong> ${userInfo.class}</p>
             <p><strong>Ngày Sinh:</strong> ${formattedDate}</p>
         `
   }
