@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Kiểm Tra Trắc Nghiệm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hệ Thống Kiểm Tra Trắc Nghiệm</h1>
+        
+        <!-- User Information Form -->
+        <div id="user-info-section" class="section">
+            <h2>Thông Tin Thí Sinh</h2>
+            <form id="user-info-form">
+                <div class="form-group">
+                    <label for="fullName">Họ và Tên:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Ngày Sinh:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="studentId">Mã Số Sinh Viên:</label>
+                    <input type="text" id="studentId" name="studentId" required>
+                </div>
+                <div class="form-group">
+                    <label for="class">Lớp:</label>
+                    <input type="text" id="class" name="class" required>
+                </div>
+                <button type="submit" class="btn">Bắt Đầu Bài Kiểm Tra</button>
+            </form>
+        </div>
+
+        <!-- Test Section (Initially Hidden) -->
+        <div id="test-section" class="section hidden">
+            <!-- Candidate Information Box -->
+            <div id="candidate-info-box" class="candidate-info">
+                <!-- Candidate information will be inserted here -->
+            </div>
+
+            <div class="test-content">
+                <!-- Question List -->
+                <div id="question-list" class="question-list">
+                    <!-- Question buttons will be dynamically inserted here -->
+                </div>
+
+                <!-- Question Display -->
+                <div id="question-display" class="question-display">
+                    <div class="test-header">
+                        <div class="test-navigation">
+                            <button id="prev-btn" class="btn nav-btn">Trước</button>
+                            <span id="question-counter">Câu hỏi 1 / 40</span>
+                            <button id="next-btn" class="btn nav-btn">Tiếp</button>
+                        </div>
+                        <button id="flag-btn" class="btn flag-btn">Đánh Dấu Câu Hỏi</button>
+                    </div>
+
+                    <div id="question-container">
+                        <!-- Questions will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+
+            <button id="submit-test" class="btn submit-btn">Nộp Bài</button>
+        </div>
+
+        <!-- Results Section (Initially Hidden) -->
+        <div id="results-section" class="section hidden">
+            <h2>Kết Quả Bài Kiểm Tra</h2>
+            <div id="results-content">
+                <div id="candidate-results-info" class="candidate-info">
+                    <!-- Candidate information will be inserted here -->
+                </div>
+                <div id="score-summary"></div>
+                <div id="detailed-results"></div>
+                <button id="restart-btn" class="btn">Làm Bài Kiểm Tra Mới</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
+
