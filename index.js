@@ -128,11 +128,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="options">
                     <div class="option">
                         <input type="radio" id="true-${index}" name="q${index}" value="true" ${question.userAnswer === "true" ? "checked" : ""}>
-                        <label for="true-${index}">Đúng</label>
+                        <label for="true-${index}">Có</label>
                     </div>
                     <div class="option">
                         <input type="radio" id="false-${index}" name="q${index}" value="false" ${question.userAnswer === "false" ? "checked" : ""}>
-                        <label for="false-${index}">Sai</label>
+                        <label for="false-${index}">Không</label>
                     </div>
                 </div>
             `
@@ -243,10 +243,62 @@ document.addEventListener("DOMContentLoaded", () => {
         resultHTML += `
             <div class="answer-column user-column">
                 <h4>Câu Trả Lời Của Bạn:</h4>
-                <p>${question.userAnswer === "true" ? "Đúng" : question.userAnswer === "false" ? "Sai" : "Chưa trả lời"}</p>
+                <p>${question.userAnswer === "true" ? "Có" : question.userAnswer === "false" ? "Không" : "Chưa trả lời"}</p>
             </div>
             `
-      } else if (question.type === "single-choice") {
+      } else if (question.type === "single-choice") {questions.push(
+        {
+            text: `Bạn có thể mô tả một trải nghiệm mua sắm hàng tiêu dùng gần đây mà bạn cảm thấy hài lòng? Điều gì làm bạn thích thú?`,
+            type: "essay",
+            userAnswer: null
+        },
+        {
+            text: `Theo bạn, yếu tố nào quan trọng nhất khi lựa chọn một sản phẩm tiêu dùng? Giải thích lý do tại sao.`,
+            type: "essay",
+            userAnswer: null
+        },
+        {
+            text: `Bạn có thói quen mua sắm hàng tiêu dùng như thế nào? Bạn thường mua theo kế hoạch hay ngẫu hứng?`,
+            type: "essay",
+            userAnswer: null
+        },
+        {
+            text: `Bạn nghĩ thế nào về các sản phẩm tiêu dùng thân thiện với môi trường? Bạn có sẵn sàng trả giá cao hơn để sử dụng chúng không?`,
+            type: "essay",
+            userAnswer: null
+        },
+        {
+            text: `Hãy kể về một lần bạn cảm thấy không hài lòng khi mua hàng tiêu dùng. Nguyên nhân do đâu?`,
+            type: "essay",
+            userAnswer: null
+        },
+        {
+            text: `Bạn có thường xuyên mua hàng tiêu dùng trực tuyến không? Những lợi ích và hạn chế của hình thức này là gì theo bạn?`,
+            type: "essay",
+            userAnswer: null
+        },
+        {
+            text: `Theo bạn, những chương trình khuyến mãi có ảnh hưởng lớn đến quyết định mua hàng tiêu dùng của bạn không? Tại sao?`,
+            type: "essay",
+            userAnswer: null
+        },
+        {
+            text: `Bạn có ưu tiên sử dụng hàng nội địa hay hàng nhập khẩu không? Lý do của bạn là gì?`,
+            type: "essay",
+            userAnswer: null
+        },
+        {
+            text: `Bạn có từng thay đổi thương hiệu một sản phẩm tiêu dùng mà bạn đã sử dụng lâu dài chưa? Nếu có, lý do là gì?`,
+            type: "essay",
+            userAnswer: null
+        },
+        {
+            text: `Theo bạn, xu hướng tiêu dùng hiện nay có thay đổi so với 5 năm trước không? Những yếu tố nào tác động đến sự thay đổi đó?`,
+            type: "essay",
+            userAnswer: null
+        }
+    );
+    
         const userOptionIndex = question.userAnswer ? Number.parseInt(question.userAnswer) : -1
 
         resultHTML += `
